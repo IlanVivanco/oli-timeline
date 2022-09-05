@@ -52,26 +52,26 @@ function getDaysTilBirthday(date) {
 	birthday.setHours(0, 0, 0, 0);
 	birthday.setFullYear(today > birthday ? today.getFullYear() + 1 : today.getFullYear());
 
-	return Math.floor((birthday - today) / this.DAY_IN_MILLI);
+	return Math.floor((birthday - today) / DAY_IN_MILLI);
 }
 
 function getDateUnits(date) {
 	const birthday = new Date(date);
 	const today = new Date();
 	const diffTime = Math.abs(today - birthday);
-	const diffInDays = Math.ceil(diffTime / this.DAY_IN_MILLI);
-	const diffInHours = Math.ceil(diffTime / this.HOUR_IN_MILLI);
-	const diffInMinutes = Math.ceil(diffTime / this.MINUTE_IN_MILLI);
-	const diffInSeconds = Math.ceil(diffTime / this.SECOND_IN_MILLI);
-	const diffInWeeks = Math.floor(diffInDays / this.DAYS_PER_WEEK);
-	const diffInWeeksReminder = diffInDays % this.DAYS_PER_WEEK;
+	const diffInDays = Math.ceil(diffTime / DAY_IN_MILLI);
+	const diffInHours = Math.ceil(diffTime / HOUR_IN_MILLI);
+	const diffInMinutes = Math.ceil(diffTime / MINUTE_IN_MILLI);
+	const diffInSeconds = Math.ceil(diffTime / SECOND_IN_MILLI);
+	const diffInWeeks = Math.floor(diffInDays / DAYS_PER_WEEK);
+	const diffInWeeksReminder = diffInDays % DAYS_PER_WEEK;
 
 	return [
-		['Semanas', `${diffInWeeks.toLocaleString(this.LOCALE)} semanas y ${diffInWeeksReminder} días`],
-		['Días', `${diffInDays.toLocaleString(this.LOCALE)} días`],
-		['Horas', `${diffInHours.toLocaleString(this.LOCALE)} horas`],
-		['Minutos', `${diffInMinutes.toLocaleString(this.LOCALE)} minutos`],
-		['Segundos', `${diffInSeconds.toLocaleString(this.LOCALE)} segundos`],
+		['Semanas', `${diffInWeeks.toLocaleString(LOCALE)} semanas y ${diffInWeeksReminder} días`],
+		['Días', `${diffInDays.toLocaleString(LOCALE)} días`],
+		['Horas', `${diffInHours.toLocaleString(LOCALE)} horas`],
+		['Minutos', `${diffInMinutes.toLocaleString(LOCALE)} minutos`],
+		['Segundos', `${diffInSeconds.toLocaleString(LOCALE)} segundos`],
 	];
 }
 
