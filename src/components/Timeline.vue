@@ -176,6 +176,8 @@ function localizedDate(date) {
 	max-width: 1200px;
 	width: 100%;
 	margin: 0 auto;
+	padding-top: 6rem;
+	padding-bottom: 4rem;
 
 	&::after {
 		content: '';
