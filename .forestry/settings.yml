@@ -7,11 +7,6 @@ sections:
 - type: document
   path: src/data/people.json
   label: People
-- type: directory
-  path: public/images
-  label: Images
-  create: all
-  match: "**/*"
 upload_dir: images
 public_path: "/public"
 front_matter_path: ''
