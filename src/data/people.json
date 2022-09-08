@@ -2,31 +2,37 @@
 	{
 		"name": "Ilán Vivanco",
 		"photo": "ilan.jpg",
-		"date": "June 17, 1988 9:45 PM"
+		"date": "June 17, 1988 9:45 PM",
+		"categories": ["Familia", "España"]
 	},
 	{
 		"name": "Gisela Haag",
 		"photo": "gise.jpg",
-		"date": "June 20, 1984 4:17 AM"
+		"date": "June 20, 1984 4:17 AM",
+		"categories": ["Familia", "España"]
 	},
 	{
 		"name": "Olivia Vivanco Haag",
 		"photo": "oli.jpg",
-		"date": "March 25, 2017 2:45 PM"
+		"date": "March 25, 2017 2:45 PM",
+		"categories": ["Familia", "España"]
 	},
 	{
 		"name": "Cristina Parada",
 		"photo": "cris.jpg",
-		"date": "Jan 09, 1960 9:45 PM"
+		"date": "Jan 09, 1960 9:45 PM",
+		"categories": ["Familia", "España"]
 	},
 	{
 		"name": "Álvaro Ambrosio Pérez",
 		"photo": "alvaro.jpg",
-		"date": "March 20, 2016 3:00 PM"
+		"date": "March 20, 2016 3:00 PM",
+		"categories": ["Familia", "España"]
 	},
 	{
 		"name": "Diana Weber",
 		"photo": "diana.jpg",
-		"date": "March 09, 1960"
+		"date": "March 09, 1960",
+		"categories": ["Vital Alsar", "Amigos", "Argentina"]
 	}
 ]
