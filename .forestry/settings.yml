@@ -7,8 +7,8 @@ sections:
 - type: document
   path: src/data/people.json
   label: People
-upload_dir: public/images
-public_path: "/images"
+upload_dir: public/images/people
+public_path: "/images/people"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
