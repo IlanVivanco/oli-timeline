@@ -8,6 +8,8 @@ const HOUR_IN_MILLI = 1000 * 60 * 60;
 const MINUTE_IN_MILLI = 1000 * 60;
 const SECOND_IN_MILLI = 1000;
 const DAYS_PER_WEEK = 7;
+const DAYS_PER_YEAR = 365.25;  // Including leap years
+const DAYS_PER_MONTH = DAYS_PER_YEAR / 12;
 
 const props = defineProps({
 	timelineData: {
@@ -76,6 +78,30 @@ function getAge(date) {
   return years;
 }
 
+function getRemainingMonths(date) {
+  const givenDate = new Date(date);
+  const today = new Date();
+
+  let years = today.getFullYear() - givenDate.getFullYear();
+  let months = today.getMonth() - givenDate.getMonth();
+  const dayDifference = today.getDate() - givenDate.getDate();
+
+  // Adjust the years if the current date is before the given date's anniversary this year
+  if (months < 0 || (months === 0 && dayDifference < 0)) {
+    years--;
+  }
+
+  // Calculate remaining months after adjusting years
+  months = (today.getMonth() + 12 - givenDate.getMonth()) % 12;
+
+  // Adjust if the day difference is negative
+  if (dayDifference < 0) {
+    months--;
+  }
+
+  return months;
+}
+
 function calculateDiffTime(date) {
   const birthday = new Date(date);
   const today = new Date();
@@ -106,9 +132,17 @@ function getDiffInWeeksReminder(diffInDays) {
   return diffInDays % DAYS_PER_WEEK;
 }
 
+function getDiffInYears(diffInDays) {
+  return Math.floor(diffInDays / DAYS_PER_YEAR);
+}
+
+function getDiffInMonths(diffInDays) {
+  return Math.floor(diffInDays / DAYS_PER_MONTH);
+}
+
 function localizedDate(date) {
-	const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-	return date.toLocaleString('es-ES', options);
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  return date.toLocaleString('es-ES', options);
 }
 
 function getDateUnits(date) {
@@ -119,8 +153,12 @@ function getDateUnits(date) {
   const diffInSeconds = getDiffInSeconds(diffTime);
   const diffInWeeks = getDiffInWeeks(diffInDays);
   const diffInWeeksReminder = getDiffInWeeksReminder(diffInDays);
+  const diffInYears = getDiffInYears(diffInDays);
+  const diffInMonths = getDiffInMonths(diffInDays);
 
   return {
+    diffInYears,
+    diffInMonths,
     diffInWeeks,
     diffInWeeksReminder,
     diffInDays,
@@ -133,20 +171,26 @@ function getDateUnits(date) {
 function formatDateUnits(people) {
   people.forEach(person => {
     const dateUnits = getDateUnits(person.date);
-		const formattedDateUnits = [];
+    const formattedDateUnits = [];
 
     for (let [key, value] of Object.entries(dateUnits)) {
       switch (key) {
+        case 'diffInYears':
+          formattedDateUnits.push(['Años', `${localizedDate(value)} años`]);
+          break;
+        case 'diffInMonths':
+          formattedDateUnits.push(['Meses', `${localizedDate(value)} meses`]);
+          break;
         case 'diffInWeeks':
           formattedDateUnits.push(['Semanas', `${localizedDate(value)} semanas`]);
           break;
         case 'diffInWeeksReminder':
           if (value > 0) {
-            formattedDateUnits[0][1] += ` y ${localizedDate(value)} días`;
+            formattedDateUnits[2][1] += ` y ${localizedDate(value)} días`;
           }
           break;
         case 'diffInDays':
-          formattedDateUnits.push(['Días', `${localizedDate(value)} días`, value]);
+          formattedDateUnits.push(['Días', `${localizedDate(value)} días`]);
           break;
         case 'diffInHours':
           formattedDateUnits.push(['Horas', `${localizedDate(value)} horas`]);
@@ -160,7 +204,7 @@ function formatDateUnits(people) {
       }
     }
 
-		person.formattedUnits = formattedDateUnits;
+    person.formattedUnits = formattedDateUnits;
   });
 
   return people;
@@ -216,9 +260,14 @@ onMounted(() => {
 						<table class="shadow-md w-full text-sm text-left text-slate-500 sm:rounded-sm">
 							<caption class="pb-6 text-lg font-semibold text-left text-slate-900 bg-white">
 								<p class="mt-1 text-sm font-normal text-center text-slate-500">
-									¡Tiene <strong>{{ getAge(person.date) }}</strong> años y
+									Tiene <strong>{{ getAge(person.date) }}</strong> años
+									<span v-if="getRemainingMonths(person.date) > 0">
+										y <strong>{{ getRemainingMonths(person.date) }}</strong> meses
+									</span>
+									</p>
+								<p class="mt-1 text-sm font-normal text-center text-slate-500">
 									<span v-if="getDaysTilBirthday(person.date) > 0">
-										faltan
+										¡Faltan
 										<strong>{{ getDaysTilBirthday(person.date) }}</strong> días para
 									</span>
 									<span v-else>
