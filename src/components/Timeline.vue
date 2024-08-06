@@ -49,12 +49,31 @@ function UTCDate(date) {
 
 function getDaysTilBirthday(date) {
 	const birthday = new Date(date);
-	const today = new Date();
+  const today = new Date();
 
-	birthday.setHours(0, 0, 0, 0);
-	birthday.setFullYear(today > birthday ? today.getFullYear() + 1 : today.getFullYear());
+  birthday.setFullYear(today.getFullYear());
+
+  if (today >= birthday) {
+    birthday.setFullYear(today.getFullYear() + 1);
+	}
 
 	return Math.floor((birthday - today) / DAY_IN_MILLI);
+}
+
+function getAge(date) {
+	const givenDate = new Date(date);
+  const today = new Date();
+
+  let years = today.getFullYear() - givenDate.getFullYear();
+  const monthDifference = today.getMonth() - givenDate.getMonth();
+  const dayDifference = today.getDate() - givenDate.getDate();
+
+  // Adjust the years if the current date is before the given date's anniversary this year
+  if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
+    years--;
+  }
+
+  return years;
 }
 
 function calculateDiffTime(date) {
@@ -197,8 +216,16 @@ onMounted(() => {
 						<table class="shadow-md w-full text-sm text-left text-slate-500 sm:rounded-sm">
 							<caption class="pb-6 text-lg font-semibold text-left text-slate-900 bg-white">
 								<p class="mt-1 text-sm font-normal text-center text-slate-500">
-									¡Faltan
-									<strong>{{ getDaysTilBirthday(person.date) }}</strong> días para su cumpleaños!
+									¡Tiene <strong>{{ getAge(person.date) }}</strong> años y
+									<span v-if="getDaysTilBirthday(person.date) > 0">
+										faltan
+										<strong>{{ getDaysTilBirthday(person.date) }}</strong> días para
+									</span>
+									<span v-else>
+										hoy es
+									</span>
+									su cumpleaños!
+									<span v-if="getDaysTilBirthday(person.date) == 0">🥳</span>
 								</p>
 							</caption>
 							<tbody>
