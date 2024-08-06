@@ -1,7 +1,8 @@
 <script setup>
-import { reactive, computed } from 'vue';
+import { reactive, computed, ref, onMounted, watchEffect } from 'vue';
 
-const LOCALE = 'de';
+const LOCALE = 'es-ES';
+
 const DAY_IN_MILLI = 1000 * 60 * 60 * 24;
 const HOUR_IN_MILLI = 1000 * 60 * 60;
 const MINUTE_IN_MILLI = 1000 * 60;
@@ -20,10 +21,11 @@ const props = defineProps({
 	},
 });
 
-const peopleData = reactive(
+let peopleData = reactive(
 	props.timelineData.map((person) => ({
 		...person,
 		datailsOpen: false,
+		// formattedUnits: formatDateUnits(person.date),
 	}))
 );
 
@@ -55,30 +57,101 @@ function getDaysTilBirthday(date) {
 	return Math.floor((birthday - today) / DAY_IN_MILLI);
 }
 
-function getDateUnits(date) {
-	const birthday = new Date(date);
-	const today = new Date();
-	const diffTime = Math.abs(today - birthday);
-	const diffInDays = Math.ceil(diffTime / DAY_IN_MILLI);
-	const diffInHours = Math.ceil(diffTime / HOUR_IN_MILLI);
-	const diffInMinutes = Math.ceil(diffTime / MINUTE_IN_MILLI);
-	const diffInSeconds = Math.ceil(diffTime / SECOND_IN_MILLI);
-	const diffInWeeks = Math.floor(diffInDays / DAYS_PER_WEEK);
-	const diffInWeeksReminder = diffInDays % DAYS_PER_WEEK;
+function calculateDiffTime(date) {
+  const birthday = new Date(date);
+  const today = new Date();
+  return Math.abs(today - birthday);
+}
 
-	return [
-		['Semanas', `${diffInWeeks.toLocaleString(LOCALE)} semanas y ${diffInWeeksReminder} días`],
-		['Días', `${diffInDays.toLocaleString(LOCALE)} días`],
-		['Horas', `${diffInHours.toLocaleString(LOCALE)} horas`],
-		['Minutos', `${diffInMinutes.toLocaleString(LOCALE)} minutos`],
-		['Segundos', `${diffInSeconds.toLocaleString(LOCALE)} segundos`],
-	];
+function getDiffInDays(diffTime) {
+  return Math.ceil(diffTime / DAY_IN_MILLI);
+}
+
+function getDiffInHours(diffTime) {
+  return Math.ceil(diffTime / HOUR_IN_MILLI);
+}
+
+function getDiffInMinutes(diffTime) {
+  return Math.ceil(diffTime / MINUTE_IN_MILLI);
+}
+
+function getDiffInSeconds(diffTime) {
+  return Math.ceil(diffTime / SECOND_IN_MILLI);
+}
+
+function getDiffInWeeks(diffInDays) {
+  return Math.floor(diffInDays / DAYS_PER_WEEK);
+}
+
+function getDiffInWeeksReminder(diffInDays) {
+  return diffInDays % DAYS_PER_WEEK;
 }
 
 function localizedDate(date) {
 	const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-	return new Date(date).toLocaleDateString('es-ES', options);
+	return date.toLocaleString('es-ES', options);
 }
+
+function getDateUnits(date) {
+  const diffTime = calculateDiffTime(date);
+  const diffInDays = getDiffInDays(diffTime);
+  const diffInHours = getDiffInHours(diffTime);
+  const diffInMinutes = getDiffInMinutes(diffTime);
+  const diffInSeconds = getDiffInSeconds(diffTime);
+  const diffInWeeks = getDiffInWeeks(diffInDays);
+  const diffInWeeksReminder = getDiffInWeeksReminder(diffInDays);
+
+  return {
+    diffInWeeks,
+    diffInWeeksReminder,
+    diffInDays,
+    diffInHours,
+    diffInMinutes,
+    diffInSeconds
+  };
+}
+
+function formatDateUnits(people) {
+  people.forEach(person => {
+    const dateUnits = getDateUnits(person.date);
+		const formattedDateUnits = [];
+
+    for (let [key, value] of Object.entries(dateUnits)) {
+      switch (key) {
+        case 'diffInWeeks':
+          formattedDateUnits.push(['Semanas', `${localizedDate(value)} semanas`]);
+          break;
+        case 'diffInWeeksReminder':
+          if (value > 0) {
+            formattedDateUnits[0][1] += ` y ${localizedDate(value)} días`;
+          }
+          break;
+        case 'diffInDays':
+          formattedDateUnits.push(['Días', `${localizedDate(value)} días`, value]);
+          break;
+        case 'diffInHours':
+          formattedDateUnits.push(['Horas', `${localizedDate(value)} horas`]);
+          break;
+        case 'diffInMinutes':
+          formattedDateUnits.push(['Minutos', `${localizedDate(value)} minutos`]);
+          break;
+        case 'diffInSeconds':
+          formattedDateUnits.push(['Segundos', `${localizedDate(value)} segundos`]);
+          break;
+      }
+    }
+
+		person.formattedUnits = formattedDateUnits;
+  });
+
+  return people;
+}
+
+onMounted(() => {
+	setInterval(() => {
+    peopleData = formatDateUnits(peopleData);
+  }, 1000);
+});
 </script>
 
 <template>
@@ -130,7 +203,7 @@ function localizedDate(date) {
 							</caption>
 							<tbody>
 								<tr
-									v-for="[label, content] in getDateUnits(person.date)"
+									v-for="[label, content] in person.formattedUnits"
 									:key="label"
 									class="border-b border-slate-100"
 								>
