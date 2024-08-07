@@ -216,7 +216,7 @@ onMounted(() => {
 	<div v-if="sortedData.length" class="timeline">
 		<div v-for="person in sortedData" :key="person.name" class="timeline__item">
 			<div class="content flex flex-col items-center px-4 py-10 max-w-sm bg-white rounded-lg border border-slate-200 shadow-md">
-				<img class="mb-3 w-24 h-24 rounded-full shadow-lg" :src="person.photo ? `/images/people/${person.photo}` : '/images/person.jpg'" :alt="person.name" />
+				<img class="mb-3 w-24 h-24 rounded-full shadow-lg" loading="lazy" :src="person.photo ? `/images/people/${person.photo}` : '/images/person.jpg'" :alt="person.name" />
 				<h2 v-if="person.name?.length" class="mb-1 text-xl font-semibold text-slate-700">
 					{{ person.name }}
 				</h2>
