@@ -45,7 +45,7 @@
     },
     {
         "name": "Sabrina Haag",
-        "photo": "default.png",
+        "photo": "sabri.jpg",
         "date": "May 25, 1986",
         "categories": [
             "Familia",
@@ -453,7 +453,7 @@
     {
         "name": "Enzo Garrido González",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
@@ -464,7 +464,7 @@
     {
         "name": "Aritz Garrido González",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
@@ -475,7 +475,7 @@
     {
         "name": "Lena Ban Alonso",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
@@ -485,30 +485,30 @@
     },
     {
         "name": "Abril Cabeza Prieto",
-        "photo": "default.png",
-        "date": "January 1, 1970",
+        "photo": "abril.jpg",
+        "date": "January 24, 2017",
         "categories": [
             "Vital Alsar",
             "España",
-            "Infantil"
+            "Primaria"
         ],
         "order": 44
     },
     {
         "name": "Sandra Martñinez Gómez-Salazar",
-        "photo": "default.png",
-        "date": "January 1, 1970",
+        "photo": "sandra.jpg",
+        "date": "August 31, 2017",
         "categories": [
             "Vital Alsar",
             "España",
-            "Infantil"
+            "Primaria"
         ],
         "order": 45
     },
     {
         "name": "Simona Kirilova Doncheva",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
@@ -519,7 +519,7 @@
     {
         "name": "Leah Diego López",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
@@ -530,7 +530,7 @@
     {
         "name": "Olivia Estrada Ganzo",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "August 30, 2016",
         "categories": [
             "Vital Alsar",
             "España",
@@ -541,7 +541,7 @@
     {
         "name": "Ruben Martinez Magaldi",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
@@ -552,7 +552,7 @@
     {
         "name": "Arnau de la Llama Monsergas",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
@@ -563,7 +563,7 @@
     {
         "name": "Selva de la Llama Monsergas",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
@@ -574,7 +574,7 @@
     {
         "name": "Nel Fernandez Gómez",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
@@ -585,7 +585,7 @@
     {
         "name": "Gael Tung Vidal Lobeto",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
@@ -596,7 +596,7 @@
     {
         "name": "Elka Platón Bronchalo",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
@@ -607,7 +607,7 @@
     {
         "name": "Nel Ugarte Viadero",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
@@ -617,8 +617,8 @@
     },
     {
         "name": "Álvaro Ambrosio Pérez",
-        "photo": "default.png",
-        "date": "January 1, 1970",
+        "photo": "alvaro.jpg",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
@@ -629,7 +629,7 @@
     {
         "name": "Jon Callau Escandon",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
@@ -640,7 +640,7 @@
     {
         "name": "Edén Lestón Alonso",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
@@ -651,7 +651,7 @@
     {
         "name": "Lucía Marques Martin",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
@@ -662,7 +662,7 @@
     {
         "name": "Alexia Merchán Fernández",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
@@ -673,7 +673,7 @@
     {
         "name": "Lucía Merchán Fernández",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
@@ -684,7 +684,7 @@
     {
         "name": "Deva",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
@@ -695,7 +695,7 @@
     {
         "name": "Marina",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
@@ -706,7 +706,7 @@
     {
         "name": "Sofía Carito Volkova",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
@@ -717,7 +717,7 @@
     {
         "name": "Lluvia",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
@@ -728,7 +728,7 @@
     {
         "name": "Linto Gómez Alonso",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
@@ -739,7 +739,7 @@
     {
         "name": "Neco Gómez Alonso",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
@@ -750,7 +750,7 @@
     {
         "name": "Otis Movellán Prieto",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
@@ -761,7 +761,7 @@
     {
         "name": "Marieta González Lamagrande",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
@@ -772,7 +772,7 @@
     {
         "name": "Carmen Carrizo Perojo",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
@@ -783,7 +783,7 @@
     {
         "name": "Manuela Carrizo Perojo",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
@@ -794,7 +794,7 @@
     {
         "name": "Carlota Sainz Galdón",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
@@ -805,7 +805,7 @@
     {
         "name": "Candela González Montesino",
         "photo": "default.png",
-        "date": "January 1, 1970",
+        "date": "January 1, 2015",
         "categories": [
             "Vital Alsar",
             "España",
