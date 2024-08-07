@@ -141,7 +141,7 @@ function getDiffInMonths(diffInDays) {
 }
 
 function localizedDate(date) {
-	const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+	const options = { year: 'numeric', month: 'long', day: 'numeric' };
 	return date.toLocaleString('es-ES', options);
 }
 
@@ -176,30 +176,25 @@ function formatDateUnits(people) {
 		for (let [key, value] of Object.entries(dateUnits)) {
 			switch (key) {
 				case 'diffInYears':
-					formattedDateUnits.push(['Años', `${localizedDate(value)} años`]);
+					formattedDateUnits.push(['Años', `${localizedDate(value)}`]);
 					break;
 				case 'diffInMonths':
-					formattedDateUnits.push(['Meses', `${localizedDate(value)} meses`]);
+					formattedDateUnits.push(['Meses', `${localizedDate(value)}`]);
 					break;
 				case 'diffInWeeks':
-					formattedDateUnits.push(['Semanas', `${localizedDate(value)} semanas`]);
-					break;
-				case 'diffInWeeksReminder':
-					if (value > 0) {
-						formattedDateUnits[2][1] += ` y ${localizedDate(value)} días`;
-					}
+					formattedDateUnits.push(['Semanas', `${localizedDate(value)}`]);
 					break;
 				case 'diffInDays':
-					formattedDateUnits.push(['Días', `${localizedDate(value)} días`]);
+					formattedDateUnits.push(['Días', `${localizedDate(value)}`]);
 					break;
 				case 'diffInHours':
-					formattedDateUnits.push(['Horas', `${localizedDate(value)} horas`]);
+					formattedDateUnits.push(['Horas', `${localizedDate(value)}`]);
 					break;
 				case 'diffInMinutes':
-					formattedDateUnits.push(['Minutos', `${localizedDate(value)} minutos`]);
+					formattedDateUnits.push(['Minutos', `${localizedDate(value)}`]);
 					break;
 				case 'diffInSeconds':
-					formattedDateUnits.push(['Segundos', `${localizedDate(value)} segundos`]);
+					formattedDateUnits.push(['Segundos', `${localizedDate(value)}`]);
 					break;
 			}
 		}
@@ -257,10 +252,10 @@ onMounted(() => {
 							</caption>
 							<tbody>
 								<tr v-for="[label, content] in person.formattedUnits" :key="label" class="border-b border-slate-100">
-									<th scope="row" class="py-4 px-6 font-medium text-slate-900 whitespace-nowrap bg-slate-50">
+									<td class="py-4 px-6 text-right">{{ content }}</td>
+									<th scope="row" class="py-4 px-6 w-6 font-medium text-slate-900 whitespace-nowrap bg-slate-50">
 										{{ label }}
 									</th>
-									<td class="py-4 px-6 text-right">{{ content }}</td>
 								</tr>
 							</tbody>
 						</table>
