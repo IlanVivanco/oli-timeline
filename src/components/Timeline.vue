@@ -299,13 +299,14 @@ onMounted(() => {
 	.timeline {
 		position: relative;
 		max-width: 1200px;
-		width: fit-content;
+		width: 100%;
 		margin: 0 auto;
 		padding-top: 6rem;
 		padding-bottom: 4rem;
 
 		@media screen and (width < 600px) {
 			padding-top: 2rem;
+			width: fit-content;
 		}
 
 		&::after {
