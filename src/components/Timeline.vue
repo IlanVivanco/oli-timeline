@@ -51,12 +51,12 @@ function UTCDate(date) {
 
 function getDaysTilBirthday(date) {
 	const birthday = new Date(date);
-  const today = new Date();
+	const today = new Date();
 
-  birthday.setFullYear(today.getFullYear());
+	birthday.setFullYear(today.getFullYear());
 
-  if (today >= birthday) {
-    birthday.setFullYear(today.getFullYear() + 1);
+	if (today >= birthday) {
+		birthday.setFullYear(today.getFullYear() + 1);
 	}
 
 	return Math.floor((birthday - today) / DAY_IN_MILLI);
@@ -64,195 +64,173 @@ function getDaysTilBirthday(date) {
 
 function getAge(date) {
 	const givenDate = new Date(date);
-  const today = new Date();
+	const today = new Date();
 
-  let years = today.getFullYear() - givenDate.getFullYear();
-  const monthDifference = today.getMonth() - givenDate.getMonth();
-  const dayDifference = today.getDate() - givenDate.getDate();
+	let years = today.getFullYear() - givenDate.getFullYear();
+	const monthDifference = today.getMonth() - givenDate.getMonth();
+	const dayDifference = today.getDate() - givenDate.getDate();
 
-  // Adjust the years if the current date is before the given date's anniversary this year
-  if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
-    years--;
-  }
+	// Adjust the years if the current date is before the given date's anniversary this year
+	if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
+		years--;
+	}
 
-  return years;
+	return years;
 }
 
 function getRemainingMonths(date) {
-  const givenDate = new Date(date);
-  const today = new Date();
+	const givenDate = new Date(date);
+	const today = new Date();
 
-  let years = today.getFullYear() - givenDate.getFullYear();
-  let months = today.getMonth() - givenDate.getMonth();
-  const dayDifference = today.getDate() - givenDate.getDate();
+	let years = today.getFullYear() - givenDate.getFullYear();
+	let months = today.getMonth() - givenDate.getMonth();
+	const dayDifference = today.getDate() - givenDate.getDate();
 
-  // Adjust the years if the current date is before the given date's anniversary this year
-  if (months < 0 || (months === 0 && dayDifference < 0)) {
-    years--;
-  }
+	// Adjust the years if the current date is before the given date's anniversary this year
+	if (months < 0 || (months === 0 && dayDifference < 0)) {
+		years--;
+	}
 
-  // Calculate remaining months after adjusting years
-  months = (today.getMonth() + 12 - givenDate.getMonth()) % 12;
+	// Calculate remaining months after adjusting years
+	months = (today.getMonth() + 12 - givenDate.getMonth()) % 12;
 
-  // Adjust if the day difference is negative
-  if (dayDifference < 0) {
-    months--;
-  }
+	// Adjust if the day difference is negative
+	if (dayDifference < 0) {
+		months--;
+	}
 
-  return months;
+	return months;
 }
 
 function calculateDiffTime(date) {
-  const birthday = new Date(date);
-  const today = new Date();
-  return Math.abs(today - birthday);
+	const birthday = new Date(date);
+	const today = new Date();
+	return Math.abs(today - birthday);
 }
 
 function getDiffInDays(diffTime) {
-  return Math.ceil(diffTime / DAY_IN_MILLI);
+	return Math.ceil(diffTime / DAY_IN_MILLI);
 }
 
 function getDiffInHours(diffTime) {
-  return Math.ceil(diffTime / HOUR_IN_MILLI);
+	return Math.ceil(diffTime / HOUR_IN_MILLI);
 }
 
 function getDiffInMinutes(diffTime) {
-  return Math.ceil(diffTime / MINUTE_IN_MILLI);
+	return Math.ceil(diffTime / MINUTE_IN_MILLI);
 }
 
 function getDiffInSeconds(diffTime) {
-  return Math.ceil(diffTime / SECOND_IN_MILLI);
+	return Math.ceil(diffTime / SECOND_IN_MILLI);
 }
 
 function getDiffInWeeks(diffInDays) {
-  return Math.floor(diffInDays / DAYS_PER_WEEK);
+	return Math.floor(diffInDays / DAYS_PER_WEEK);
 }
 
 function getDiffInWeeksReminder(diffInDays) {
-  return diffInDays % DAYS_PER_WEEK;
+	return diffInDays % DAYS_PER_WEEK;
 }
 
 function getDiffInYears(diffInDays) {
-  return Math.floor(diffInDays / DAYS_PER_YEAR);
+	return Math.floor(diffInDays / DAYS_PER_YEAR);
 }
 
 function getDiffInMonths(diffInDays) {
-  return Math.floor(diffInDays / DAYS_PER_MONTH);
+	return Math.floor(diffInDays / DAYS_PER_MONTH);
 }
 
 function localizedDate(date) {
-  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-  return date.toLocaleString('es-ES', options);
+	const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+	return date.toLocaleString('es-ES', options);
 }
 
 function getDateUnits(date) {
-  const diffTime = calculateDiffTime(date);
-  const diffInDays = getDiffInDays(diffTime);
-  const diffInHours = getDiffInHours(diffTime);
-  const diffInMinutes = getDiffInMinutes(diffTime);
-  const diffInSeconds = getDiffInSeconds(diffTime);
-  const diffInWeeks = getDiffInWeeks(diffInDays);
-  const diffInWeeksReminder = getDiffInWeeksReminder(diffInDays);
-  const diffInYears = getDiffInYears(diffInDays);
-  const diffInMonths = getDiffInMonths(diffInDays);
+	const diffTime = calculateDiffTime(date);
+	const diffInDays = getDiffInDays(diffTime);
+	const diffInHours = getDiffInHours(diffTime);
+	const diffInMinutes = getDiffInMinutes(diffTime);
+	const diffInSeconds = getDiffInSeconds(diffTime);
+	const diffInWeeks = getDiffInWeeks(diffInDays);
+	const diffInWeeksReminder = getDiffInWeeksReminder(diffInDays);
+	const diffInYears = getDiffInYears(diffInDays);
+	const diffInMonths = getDiffInMonths(diffInDays);
 
-  return {
-    diffInYears,
-    diffInMonths,
-    diffInWeeks,
-    diffInWeeksReminder,
-    diffInDays,
-    diffInHours,
-    diffInMinutes,
-    diffInSeconds
-  };
+	return {
+		diffInYears,
+		diffInMonths,
+		diffInWeeks,
+		diffInWeeksReminder,
+		diffInDays,
+		diffInHours,
+		diffInMinutes,
+		diffInSeconds
+	};
 }
 
 function formatDateUnits(people) {
-  people.forEach(person => {
-    const dateUnits = getDateUnits(person.date);
-    const formattedDateUnits = [];
+	people.forEach(person => {
+		const dateUnits = getDateUnits(person.date);
+		const formattedDateUnits = [];
 
-    for (let [key, value] of Object.entries(dateUnits)) {
-      switch (key) {
-        case 'diffInYears':
-          formattedDateUnits.push(['Años', `${localizedDate(value)} años`]);
-          break;
-        case 'diffInMonths':
-          formattedDateUnits.push(['Meses', `${localizedDate(value)} meses`]);
-          break;
-        case 'diffInWeeks':
-          formattedDateUnits.push(['Semanas', `${localizedDate(value)} semanas`]);
-          break;
-        case 'diffInWeeksReminder':
-          if (value > 0) {
-            formattedDateUnits[2][1] += ` y ${localizedDate(value)} días`;
-          }
-          break;
-        case 'diffInDays':
-          formattedDateUnits.push(['Días', `${localizedDate(value)} días`]);
-          break;
-        case 'diffInHours':
-          formattedDateUnits.push(['Horas', `${localizedDate(value)} horas`]);
-          break;
-        case 'diffInMinutes':
-          formattedDateUnits.push(['Minutos', `${localizedDate(value)} minutos`]);
-          break;
-        case 'diffInSeconds':
-          formattedDateUnits.push(['Segundos', `${localizedDate(value)} segundos`]);
-          break;
-      }
-    }
+		for (let [key, value] of Object.entries(dateUnits)) {
+			switch (key) {
+				case 'diffInYears':
+					formattedDateUnits.push(['Años', `${localizedDate(value)} años`]);
+					break;
+				case 'diffInMonths':
+					formattedDateUnits.push(['Meses', `${localizedDate(value)} meses`]);
+					break;
+				case 'diffInWeeks':
+					formattedDateUnits.push(['Semanas', `${localizedDate(value)} semanas`]);
+					break;
+				case 'diffInWeeksReminder':
+					if (value > 0) {
+						formattedDateUnits[2][1] += ` y ${localizedDate(value)} días`;
+					}
+					break;
+				case 'diffInDays':
+					formattedDateUnits.push(['Días', `${localizedDate(value)} días`]);
+					break;
+				case 'diffInHours':
+					formattedDateUnits.push(['Horas', `${localizedDate(value)} horas`]);
+					break;
+				case 'diffInMinutes':
+					formattedDateUnits.push(['Minutos', `${localizedDate(value)} minutos`]);
+					break;
+				case 'diffInSeconds':
+					formattedDateUnits.push(['Segundos', `${localizedDate(value)} segundos`]);
+					break;
+			}
+		}
 
-    person.formattedUnits = formattedDateUnits;
-  });
+		person.formattedUnits = formattedDateUnits;
+	});
 
-  return people;
+	return people;
 }
 
 onMounted(() => {
 	setInterval(() => {
-    peopleData = formatDateUnits(peopleData);
-  }, 1000);
+		peopleData = formatDateUnits(peopleData);
+	}, 1000);
 });
 </script>
 
 <template>
 	<div v-if="sortedData.length" class="timeline">
 		<div v-for="person in sortedData" :key="person.name" class="timeline__item">
-			<div
-				class="content flex flex-col items-center px-4 py-10 max-w-sm bg-white rounded-lg border border-slate-200 shadow-md"
-			>
-				<img
-					class="mb-3 w-24 h-24 rounded-full shadow-lg"
-					:src="person.photo ? `/images/people/${person.photo}` : '/images/person.jpg'"
-					:alt="person.name"
-				/>
+			<div class="content flex flex-col items-center px-4 py-10 max-w-sm bg-white rounded-lg border border-slate-200 shadow-md">
+				<img class="mb-3 w-24 h-24 rounded-full shadow-lg" :src="person.photo ? `/images/people/${person.photo}` : '/images/person.jpg'" :alt="person.name" />
 				<h2 v-if="person.name?.length" class="mb-1 text-xl font-semibold text-slate-700">
 					{{ person.name }}
 				</h2>
-				<time
-					v-if="person.date?.length"
-					class="text-sm font-medium mb-4 text-slate-500"
-					:datetime="UTCDate(person.date)"
-				>
+				<time v-if="person.date?.length" class="text-sm font-medium mb-4 text-slate-500" :datetime="UTCDate(person.date)">
 					{{ localizedDate(person.date) }}
 				</time>
 				<div class="flex mt-4 space-x-3 md:mt-6">
-					<a
-						v-if="!person.datailsOpen"
-						href="#"
-						class="inline-flex items-center text-sm font-medium text-center text-emerald-600"
-						@click.prevent="changeDetailStatus(person)"
-						>Más info</a
-					>
-					<a
-						v-else
-						href="#"
-						class="inline-flex items-center text-sm font-medium text-center text-slate-400"
-						@click.prevent="person.datailsOpen = !person.datailsOpen"
-						>Cerrar</a
-					>
+					<a v-if="!person.datailsOpen" href="#" class="inline-flex items-center text-sm font-medium text-center text-emerald-600" @click.prevent="changeDetailStatus(person)">Más info</a>
+					<a v-else href="#" class="inline-flex items-center text-sm font-medium text-center text-slate-400" @click.prevent="person.datailsOpen = !person.datailsOpen">Cerrar</a>
 				</div>
 
 				<Transition name="bounce">
@@ -264,7 +242,7 @@ onMounted(() => {
 									<span v-if="getRemainingMonths(person.date) > 0">
 										y <strong>{{ getRemainingMonths(person.date) }}</strong> meses
 									</span>
-									</p>
+								</p>
 								<p class="mt-1 text-sm font-normal text-center text-slate-500">
 									<span v-if="getDaysTilBirthday(person.date) > 0">
 										¡Faltan
@@ -278,11 +256,7 @@ onMounted(() => {
 								</p>
 							</caption>
 							<tbody>
-								<tr
-									v-for="[label, content] in person.formattedUnits"
-									:key="label"
-									class="border-b border-slate-100"
-								>
+								<tr v-for="[label, content] in person.formattedUnits" :key="label" class="border-b border-slate-100">
 									<th scope="row" class="py-4 px-6 font-medium text-slate-900 whitespace-nowrap bg-slate-50">
 										{{ label }}
 									</th>
@@ -298,184 +272,227 @@ onMounted(() => {
 </template>
 
 <style scoped lang="scss">
-.bounce-enter-active {
-	animation: bounce-in 0.6s;
-}
-
-.bounce-leave-active {
-	animation: bounce-in 0.6s reverse;
-}
-
-@keyframes bounce-in {
-	0% {
-		transform: scale(0);
-		opacity: 0;
+	.bounce-enter-active {
+		animation: bounce-in 0.6s;
 	}
-	75% {
-		transform: scale(1.1);
+
+	.bounce-leave-active {
+		animation: bounce-in 0.6s reverse;
 	}
-	100% {
-		transform: scale(1);
-		opacity: 1;
-	}
-}
 
-.timeline {
-	position: relative;
-	max-width: 1200px;
-	width: 100%;
-	margin: 0 auto;
-	padding-top: 6rem;
-	padding-bottom: 4rem;
+	@keyframes bounce-in {
+		0% {
+			transform: scale(0);
+			opacity: 0;
+		}
 
-	&::after {
-		content: '';
-		position: absolute;
-		width: 6px;
-		background-color: var(--color-emerald-600);
-		top: 0;
-		bottom: 0;
-		left: 90%;
-		margin-left: -3px;
+		75% {
+			transform: scale(1.1);
+		}
 
-		@media screen and (min-width: 1024px) {
-			left: 50%;
+		100% {
+			transform: scale(1);
+			opacity: 1;
 		}
 	}
 
-	&__item {
-		padding: 10px 40px;
+	.timeline {
 		position: relative;
-		background-color: inherit;
-		width: 90%;
-		min-width: 500px;
+		max-width: 1200px;
+		width: fit-content;
+		margin: 0 auto;
+		padding-top: 6rem;
+		padding-bottom: 4rem;
 
-		@media screen and (min-width: 1024px) {
-			width: 50%;
-		}
-
-		.content {
-			position: relative;
+		@media screen and (width < 600px) {
+			padding-top: 2rem;
 		}
 
 		&::after {
 			content: '';
 			position: absolute;
-			width: 25px;
-			height: 25px;
-			right: 0;
-			background-color: var(--color-white);
-			border: 6px solid var(--color-emerald-600);
-			top: 50%;
-			transform: translate(50%, -50%);
-			border-radius: 50%;
-			z-index: 1;
-		}
-
-		&:nth-child(odd) {
-			left: 0;
-			@media screen and (min-width: 520px) {
-				&::before {
-					content: '';
-					position: absolute;
-					top: 50%;
-					right: 0;
-					width: 50%;
-					transform: translateY(-50%);
-					z-index: 0;
-					height: 6px;
-					background-color: var(--color-emerald-600);
-				}
-			}
-			.content {
-				@media screen and (min-width: 520px) {
-					margin: 0 0 0 60px;
-
-					&::before {
-						content: '';
-						position: absolute;
-						height: 15px;
-						width: 15px;
-						top: 50%;
-						transform: translateY(-50%);
-						right: -5px;
-						background-color: var(--color-emerald-600);
-						border: 6px solid var(--color-emerald-600);
-						border-radius: 50%;
-						z-index: 1;
-					}
-				}
-			}
-		}
-
-		&:nth-child(even) {
-			@media screen and (min-width: 520px) {
-				&::before {
-					content: '';
-					position: absolute;
-					top: 50%;
-					transform: translateY(-50%);
-					right: 0;
-					width: 50%;
-					z-index: 0;
-					height: 6px;
-					background-color: var(--color-emerald-600);
-					@media screen and (min-width: 1024px) {
-						left: 0;
-					}
-				}
-
-				&::after {
-					left: auto;
-					right: 0;
-					transform: translate(50%, -50%);
-				}
-			}
+			width: 6px;
+			background-color: var(--color-emerald-600);
+			top: 0;
+			bottom: 0;
+			left: 90%;
+			margin-left: -3px;
 
 			@media screen and (min-width: 1024px) {
 				left: 50%;
+			}
 
-				&::after {
-					left: 0;
-					right: auto;
-					transform: translate(-50%, -50%);
-				}
+			@media screen and (width < 600px) {
+				left: 50%;
+				z-index: -1;
+			}
+		}
+
+		&__item {
+			padding: 10px 40px;
+			position: relative;
+			background-color: inherit;
+			width: 90%;
+			min-width: 500px;
+
+			@media screen and (min-width: 1024px) {
+				width: 50%;
+			}
+
+			@media screen and (width < 600px) {
+				width: 100%;
 			}
 
 			.content {
-				@media screen and (min-width: 520px) {
-					margin: 0 60px 0 0;
+				position: relative;
 
-					&::before {
-						content: '';
-						position: absolute;
-						height: 15px;
-						width: 15px;
-						top: 50%;
-						transform: translateY(-50%);
-						right: -5px;
-						background-color: var(--color-emerald-600);
-						border: 6px solid var(--color-emerald-600);
-						border-radius: 50%;
-						z-index: 1;
-						@media screen and (min-width: 1024px) {
-							left: -5px;
-						}
-					}
-				}
-
-				@media screen and (min-width: 1024px) {
-					margin: 0 0 0 60px;
+				@media screen and (width < 600px) {
+					min-width: 100%;
+					margin-bottom: 2rem;
 				}
 			}
 
 			&::after {
+				content: '';
+				position: absolute;
+				width: 25px;
+				height: 25px;
+				right: 0;
+				background-color: var(--color-white);
+				border: 6px solid var(--color-emerald-600);
+				top: 50%;
+				transform: translate(50%, -50%);
+				border-radius: 50%;
+				z-index: 1;
+
+				@media screen and (width < 600px) {
+					inset: auto;
+					top: 0;
+					transform: translate(-50%, 0);
+				}
+			}
+
+			&:nth-child(odd) {
+				left: 0;
+
+				@media screen and (min-width: 600px) {
+					&::before {
+						content: '';
+						position: absolute;
+						top: 50%;
+						right: 0;
+						width: 50%;
+						transform: translateY(-50%);
+						z-index: 0;
+						height: 6px;
+						background-color: var(--color-emerald-600);
+					}
+				}
+
+				.content {
+					@media screen and (min-width: 1024px) {
+						margin: 0 0 0 60px;
+					}
+
+					@media screen and (min-width: 600px) {
+						margin: 0 0 0 auto;
+					}
+
+					@media screen and (min-width: 600px) {
+						&::before {
+							content: '';
+							position: absolute;
+							height: 15px;
+							width: 15px;
+							top: 50%;
+							transform: translateY(-50%);
+							right: -5px;
+							background-color: var(--color-emerald-600);
+							border: 6px solid var(--color-emerald-600);
+							border-radius: 50%;
+							z-index: 1;
+						}
+					}
+				}
+			}
+
+			&:nth-child(even) {
+				@media screen and (min-width: 600px) {
+					&::before {
+						content: '';
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						right: 0;
+						width: 50%;
+						z-index: 0;
+						height: 6px;
+						background-color: var(--color-emerald-600);
+
+						@media screen and (min-width: 1024px) {
+							left: 0;
+						}
+					}
+
+					&::after {
+						left: auto;
+						right: 0;
+						transform: translate(50%, -50%);
+					}
+				}
+
+				@media screen and (min-width: 1024px) {
+					left: 50%;
+
+					&::after {
+						left: 0;
+						right: auto;
+						transform: translate(-50%, -50%);
+					}
+				}
+
+				.content {
+					@media screen and (min-width: 1024px) {
+						margin: 0 60px 0 0;
+					}
+
+					@media screen and (min-width: 600px) {
+						margin: 0 0 0 auto;
+					}
+
+					@media screen and (min-width: 600px) {
+
+						&::before {
+							content: '';
+							position: absolute;
+							height: 15px;
+							width: 15px;
+							top: 50%;
+							transform: translateY(-50%);
+							right: -5px;
+							background-color: var(--color-emerald-600);
+							border: 6px solid var(--color-emerald-600);
+							border-radius: 50%;
+							z-index: 1;
+
+							@media screen and (min-width: 1024px) {
+								left: -5px;
+							}
+						}
+					}
+
+					@media screen and (min-width: 1024px) {
+						margin: 0 0 0 60px;
+					}
+				}
+
 				&::after {
-					left: 0;
-					transform: translate(-50%, -50%);
+					&::after {
+						left: 0;
+						transform: translate(-50%, -50%);
+					}
 				}
 			}
 		}
 	}
-}
 </style>
