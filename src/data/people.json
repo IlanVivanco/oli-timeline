@@ -2,7 +2,7 @@
     {
         "name": "Gisela Haag",
         "photo": "gise.jpg",
-        "date": "June 20, 1984 12:00:00 AM",
+        "date": "June 20, 1984",
         "categories": [
             "Familia",
             "España",
@@ -13,7 +13,7 @@
     {
         "name": "Ilán Vivanco",
         "photo": "ilan.jpg",
-        "date": "June 17, 1988 12:00:00 AM",
+        "date": "June 17, 1988",
         "categories": [
             "Familia",
             "España",
@@ -24,7 +24,7 @@
     {
         "name": "Olivia Vivanco Haag",
         "photo": "oli.jpg",
-        "date": "March 25, 2017 12:00:00 AM",
+        "date": "March 25, 2017",
         "categories": [
             "Familia",
             "España",
@@ -35,7 +35,7 @@
     {
         "name": "Diana Weber",
         "photo": "diana.jpg",
-        "date": "March 9, 1960 12:00:00 AM",
+        "date": "March 9, 1960",
         "categories": [
             "Familia",
             "Argentina",
@@ -46,7 +46,7 @@
     {
         "name": "Sabrina Haag",
         "photo": "default.png",
-        "date": "May 25, 1986 12:00:00 AM",
+        "date": "May 25, 1986",
         "categories": [
             "Familia",
             "Argentina",
@@ -57,7 +57,7 @@
     {
         "name": "Manuel Canon",
         "photo": "manu.jpg",
-        "date": "November 17, 2014 12:00:00 AM",
+        "date": "November 17, 2014",
         "categories": [
             "Familia",
             "Argentina",
@@ -68,7 +68,7 @@
     {
         "name": "Bautista Canon",
         "photo": "bauti.jpg",
-        "date": "November 24, 2016 12:00:00 AM",
+        "date": "November 24, 2016",
         "categories": [
             "Familia",
             "Argentina",
@@ -79,7 +79,7 @@
     {
         "name": "Nicolás Haag",
         "photo": "nicoh.jpg",
-        "date": "July 14, 1960 12:00:00 AM",
+        "date": "July 14, 1960",
         "categories": [
             "Familia",
             "Argentina",
@@ -90,7 +90,7 @@
     {
         "name": "Cristina Parada",
         "photo": "cris.jpg",
-        "date": "September 1, 1960 12:00:00 AM",
+        "date": "September 1, 1960",
         "categories": [
             "Familia",
             "España",
@@ -101,7 +101,7 @@
     {
         "name": "Ricardo Vivanco",
         "photo": "ricardo.jpg",
-        "date": "November 28, 1955 12:00:00 AM",
+        "date": "November 28, 1955",
         "categories": [
             "Familia",
             "Argentina",
@@ -112,7 +112,7 @@
     {
         "name": "Noara Vivanco",
         "photo": "noa.jpg",
-        "date": "July 27, 1990 12:00:00 AM",
+        "date": "July 27, 1990",
         "categories": [
             "Familia",
             "Mundo",
@@ -123,7 +123,7 @@
     {
         "name": "Federico Vivanco",
         "photo": "fede.jpg",
-        "date": "September 19, 1980 12:00:00 AM",
+        "date": "September 19, 1980",
         "categories": [
             "Familia",
             "España",
@@ -134,7 +134,7 @@
     {
         "name": "Ximena Vivanco",
         "photo": "xime.jpg",
-        "date": "July 28, 1978 12:00:00 AM",
+        "date": "July 28, 1978",
         "categories": [
             "Familia",
             "Argentina",
@@ -145,7 +145,7 @@
     {
         "name": "Nicolás Lafuente",
         "photo": "nico.jpg",
-        "date": "January 31, 1988 12:00:00 AM",
+        "date": "January 31, 1988",
         "categories": [
             "Amigos",
             "Argentina",
@@ -156,7 +156,7 @@
     {
         "name": "Majo Quiroga",
         "photo": "majo.jpg",
-        "date": "July 5, 1987 12:00:00 AM",
+        "date": "July 5, 1987",
         "categories": [
             "Amigos",
             "Argentina",
@@ -167,7 +167,7 @@
     {
         "name": "Martina Lafuente Quiroga",
         "photo": "martu.jpg",
-        "date": "December 22, 2017 12:00:00 AM",
+        "date": "December 22, 2017",
         "categories": [
             "Amigos",
             "Argentina",
@@ -178,7 +178,7 @@
     {
         "name": "Felipe Lafuente Quiroga",
         "photo": "feli.jpg",
-        "date": "March 21, 2022 12:00:00 AM",
+        "date": "March 21, 2022",
         "categories": [
             "Amigos",
             "Argentina",
@@ -189,7 +189,7 @@
     {
         "name": "Lelia Polari",
         "photo": "lelia.jpg",
-        "date": "March 25, 1988 12:00:00 AM",
+        "date": "March 25, 1988",
         "categories": [
             "Amigos",
             "Argentina",
@@ -200,7 +200,7 @@
     {
         "name": "Martín Cantalupo",
         "photo": "martin.jpg",
-        "date": "November 15, 1984 12:00:00 AM",
+        "date": "November 15, 1984",
         "categories": [
             "Amigos",
             "Argentina",
@@ -211,7 +211,7 @@
     {
         "name": "León Cantalupo Polari",
         "photo": "leon.jpg",
-        "date": "October 17, 2022 12:00:00 AM",
+        "date": "October 17, 2022",
         "categories": [
             "Amigos",
             "Argentina",
@@ -222,7 +222,7 @@
     {
         "name": "Inés Cantalupo Polari",
         "photo": "ine.jpg",
-        "date": "January 3, 2020 12:00:00 AM",
+        "date": "January 3, 2020",
         "categories": [
             "Amigos",
             "Argentina",
@@ -233,7 +233,7 @@
     {
         "name": "Andrea Muse",
         "photo": "andre.jpg",
-        "date": "October 3, 1987 12:00:00 AM",
+        "date": "October 3, 1987",
         "categories": [
             "Amigos",
             "Argentina",
@@ -244,7 +244,7 @@
     {
         "name": "Iván Salgado",
         "photo": "ivan.jpg",
-        "date": "June 10, 1988 12:00:00 AM",
+        "date": "June 10, 1988",
         "categories": [
             "Amigos",
             "Argentina",
@@ -255,7 +255,7 @@
     {
         "name": "Carlos Barrios",
         "photo": "car.jpg",
-        "date": "September 22, 1989 12:00:00 AM",
+        "date": "September 22, 1989",
         "categories": [
             "Amigos",
             "Mundo",
@@ -266,7 +266,7 @@
     {
         "name": "Leila Ceballos",
         "photo": "lei.jpg",
-        "date": "April 20, 1983 12:00:00 AM",
+        "date": "April 20, 1983",
         "categories": [
             "Amigos",
             "Argentina",
@@ -277,7 +277,7 @@
     {
         "name": "Silvana Fernandez",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Amigos",
             "España",
@@ -288,7 +288,7 @@
     {
         "name": "Marcela Fernandez",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Amigos",
             "España",
@@ -299,7 +299,7 @@
     {
         "name": "Tatiana ? Fernandez",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Amigos",
             "España",
@@ -310,7 +310,7 @@
     {
         "name": "Claudio López",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Amigos",
             "España",
@@ -321,7 +321,7 @@
     {
         "name": "Tefy Mavi",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Amigos",
             "España",
@@ -332,7 +332,7 @@
     {
         "name": "Luna López Mavi",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Amigos",
             "España",
@@ -343,7 +343,7 @@
     {
         "name": "Jorge Scotto",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Amigos",
             "España",
@@ -354,7 +354,7 @@
     {
         "name": "Martín Scotto",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Amigos",
             "España",
@@ -365,7 +365,7 @@
     {
         "name": "Fabián Scotto",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Amigos",
             "España",
@@ -376,7 +376,7 @@
     {
         "name": "Sonia Gómez-Salazar",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Amigos",
             "España",
@@ -387,7 +387,7 @@
     {
         "name": "Sonia Ganzo",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Amigos",
             "España",
@@ -398,7 +398,7 @@
     {
         "name": "Santos Estrada",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Amigos",
             "España",
@@ -409,7 +409,7 @@
     {
         "name": "Cristal Prieto",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Amigos",
             "España",
@@ -420,7 +420,7 @@
     {
         "name": "Transi González",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Amigos",
             "España",
@@ -431,7 +431,7 @@
     {
         "name": "Miguel Garrido",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Amigos",
             "España",
@@ -442,7 +442,7 @@
     {
         "name": "Laura Alonso",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Amigos",
             "España",
@@ -453,7 +453,7 @@
     {
         "name": "Enzo Garrido González",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -464,7 +464,7 @@
     {
         "name": "Aritz Garrido González",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -475,7 +475,7 @@
     {
         "name": "Lena Ban Alonso",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -486,7 +486,7 @@
     {
         "name": "Abril Cabeza Prieto",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -497,7 +497,7 @@
     {
         "name": "Sandra Martñinez Gómez-Salazar",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -508,7 +508,7 @@
     {
         "name": "Simona Kirilova Doncheva",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -519,7 +519,7 @@
     {
         "name": "Leah Diego López",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -530,7 +530,7 @@
     {
         "name": "Olivia Estrada Ganzo",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -541,7 +541,7 @@
     {
         "name": "Ruben Martinez Magaldi",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -552,7 +552,7 @@
     {
         "name": "Arnau de la Llama Monsergas",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -563,7 +563,7 @@
     {
         "name": "Selva de la Llama Monsergas",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -574,7 +574,7 @@
     {
         "name": "Nel Fernandez Gómez",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -585,7 +585,7 @@
     {
         "name": "Gael Tung Vidal Lobeto",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -596,7 +596,7 @@
     {
         "name": "Elka Platón Bronchalo",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -607,7 +607,7 @@
     {
         "name": "Nel Ugarte Viadero",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -618,7 +618,7 @@
     {
         "name": "Álvaro Ambrosio Pérez",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -629,7 +629,7 @@
     {
         "name": "Jon Callau Escandon",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -640,7 +640,7 @@
     {
         "name": "Edén Lestón Alonso",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -651,7 +651,7 @@
     {
         "name": "Lucía Marques Martin",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -662,7 +662,7 @@
     {
         "name": "Alexia Merchán Fernández",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -673,7 +673,7 @@
     {
         "name": "Lucía Merchán Fernández",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -684,7 +684,7 @@
     {
         "name": "Deva",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -695,7 +695,7 @@
     {
         "name": "Marina",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -706,7 +706,7 @@
     {
         "name": "Sofía Carito Volkova",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -717,7 +717,7 @@
     {
         "name": "Lluvia",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -728,7 +728,7 @@
     {
         "name": "Linto Gómez Alonso",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -739,7 +739,7 @@
     {
         "name": "Neco Gómez Alonso",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -750,7 +750,7 @@
     {
         "name": "Otis Movellán Prieto",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -761,7 +761,7 @@
     {
         "name": "Marieta González Lamagrande",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -772,7 +772,7 @@
     {
         "name": "Carmen Carrizo Perojo",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -783,7 +783,7 @@
     {
         "name": "Manuela Carrizo Perojo",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -794,7 +794,7 @@
     {
         "name": "Carlota Sainz Galdón",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
@@ -805,7 +805,7 @@
     {
         "name": "Candela González Montesino",
         "photo": "default.png",
-        "date": "January 1, 1970 12:00:00 AM",
+        "date": "January 1, 1970",
         "categories": [
             "Vital Alsar",
             "España",
