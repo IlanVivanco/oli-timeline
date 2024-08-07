@@ -1,7 +1,7 @@
 [
     {
         "name": "Gisela Haag",
-        "photo": "default.png",
+        "photo": "gise.jpg",
         "date": "June 20, 1984 12:00:00 AM",
         "categories": [
             "Familia",
@@ -12,7 +12,7 @@
     },
     {
         "name": "Ilán Vivanco",
-        "photo": "default.png",
+        "photo": "ilan.jpg",
         "date": "June 17, 1988 12:00:00 AM",
         "categories": [
             "Familia",
@@ -23,7 +23,7 @@
     },
     {
         "name": "Olivia Vivanco Haag",
-        "photo": "default.png",
+        "photo": "oli.jpg",
         "date": "March 25, 2017 12:00:00 AM",
         "categories": [
             "Familia",
@@ -34,7 +34,7 @@
     },
     {
         "name": "Diana Weber",
-        "photo": "default.png",
+        "photo": "diana.jpg",
         "date": "March 9, 1960 12:00:00 AM",
         "categories": [
             "Familia",
@@ -89,7 +89,7 @@
     },
     {
         "name": "Cristina Parada",
-        "photo": "default.png",
+        "photo": "cris.jpg",
         "date": "September 1, 1960 12:00:00 AM",
         "categories": [
             "Familia",
@@ -99,8 +99,19 @@
         "order": 9
     },
     {
-        "name": "Noara Vivanco",
+        "name": "Ricardo Vivanco",
         "photo": "default.png",
+        "date": "November 28, 1955 12:00:00 AM",
+        "categories": [
+            "Familia",
+            "Argentina",
+            "Papá"
+        ],
+        "order": 9
+    },
+    {
+        "name": "Noara Vivanco",
+        "photo": "noa.jpg",
         "date": "July 27, 1990 12:00:00 AM",
         "categories": [
             "Familia",
